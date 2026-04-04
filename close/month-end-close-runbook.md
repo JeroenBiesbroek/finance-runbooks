@@ -7,7 +7,7 @@ Every month-end. Start at business day -5 relative to month-end.
 
 ## Prerequisites
 - Access to Exact Online
-- Close checklist from finance-templates
+- Close checklist from [templates/close-checklist-template.md](../templates/close-checklist-template.md)
 - Previous close package for reference
 
 ## Procedure
