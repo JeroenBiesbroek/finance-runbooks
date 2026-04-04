@@ -1,5 +1,10 @@
 # Journal Handling Runbook
 
+**Owner:** Finance Lead
+
+## When to use
+When manual, recurring, accrual, correcting, or reclassification journal entries need to be created and posted in Exact Online.
+
 ## Journal types
 
 | Type | Approval |

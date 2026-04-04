@@ -1,5 +1,10 @@
 # Fixed Asset Control Runbook
 
+**Owner:** Finance Lead
+
+## When to use
+When assets need to be added, deprecated, disposed of, or reviewed in Exact Online.
+
 ## Asset addition
 1. Confirm asset meets capitalization threshold (> EUR 500 excl. VAT)
 2. Gather: description, acquisition date/cost, useful life, depreciation method, GL accounts

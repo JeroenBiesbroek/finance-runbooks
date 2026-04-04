@@ -1,5 +1,10 @@
 # Purchase Exception Runbook
 
+**Owner:** Finance Lead
+
+## When to use
+When purchase invoices fail to process, approval is overdue, creditor discrepancies are detected, or duplicate invoices are found.
+
 ## Common exceptions
 
 ### P-01: Missing creditor

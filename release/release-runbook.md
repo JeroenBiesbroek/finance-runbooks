@@ -1,5 +1,10 @@
 # Release Runbook
 
+**Owner:** Technical Lead
+
+## When to use
+When deploying approved changes to the Finance domain production environment.
+
 ## Pre-release
 1. Verify all PRs merged (to `develop` for automation, or ready for merge)
 2. Verify all test evidence attached

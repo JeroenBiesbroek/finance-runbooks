@@ -1,5 +1,10 @@
 # Bank Exception Runbook
 
+**Owner:** Finance Lead
+
+## When to use
+When bank statements fail to import, transactions cannot be matched, reconciliation shows differences, or unmatched items are older than 5 business days.
+
 ## Common exceptions
 
 ### B-01: Statement import failure

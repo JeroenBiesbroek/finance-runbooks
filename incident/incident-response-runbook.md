@@ -1,5 +1,10 @@
 # Incident Response Runbook
 
+**Owner:** Technical Lead (triage), Finance Lead (financial impact)
+
+## When to use
+When financial data integrity is at risk, sync is down, Exact Online is unavailable, automation produces incorrect results, or any event that could affect financial reporting.
+
 ## Severity levels
 
 | Level | Definition | Response time |

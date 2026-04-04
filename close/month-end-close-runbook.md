@@ -1,5 +1,10 @@
 # Month-End Close Runbook
 
+**Owner:** Finance Lead
+
+## When to use
+Every month-end. Start at business day -5 relative to month-end.
+
 ## Prerequisites
 - Access to Exact Online
 - Close checklist from finance-templates

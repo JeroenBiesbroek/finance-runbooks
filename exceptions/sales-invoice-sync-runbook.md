@@ -1,5 +1,10 @@
 # Sales Invoice Sync Exception Runbook
 
+**Owner:** Technical Lead
+
+## When to use
+When sales invoice sync reports exceptions, invoices are stuck in pending/failed status, or monitoring alerts trigger.
+
 ## Common exceptions
 
 ### E-01: Missing debtor mapping

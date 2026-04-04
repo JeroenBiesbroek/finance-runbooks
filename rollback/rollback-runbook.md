@@ -1,5 +1,7 @@
 # Rollback Runbook
 
+**Owner:** Technical Lead
+
 ## When to use
 - Critical errors after release
 - Data integrity issues from release
