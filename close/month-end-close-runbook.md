@@ -20,8 +20,10 @@ Every month-end. Start at business day -5 relative to month-end.
 ### Step 2: Pre-Close
 
 **2.1 Sales Invoice Sync**
-1. Run sync report from finance-automation
-   - *Until automation is live:* manually compare Zoho Books invoice count (Verkoop > Facturen, filter by period) to Exact Online posted sales invoice count (Verkoop > Verkoopfacturen > Overzicht, filter by period). Document both counts.
+1. Compare Zoho Books invoice count to Exact Online
+   - Zoho Books: Verkoop > Facturen, filter by period dates
+   - Exact Online: Financieel > Boekingen > Overzicht, filter dagboek **70 - Verkoopboek**, period. Count = "Aantal te verwerken boekingen" + "Aantal verwerkte boekingen"
+   - *Note:* Sales invoices are entered via dagboek 70 (Verkoopboek), not the Verkoopfacturen module.
 2. Verify counts match between Zoho Books and Exact
 3. Review pending/failed items
 4. Resolve or defer exceptions (document each)
@@ -32,6 +34,8 @@ Every month-end. Start at business day -5 relative to month-end.
 
 **2.3 Bank Processing**
 1. Verify all bank statements imported through month-end
+   - Check each bank account's last import date (dashboard shows "Bijgewerkt t/m")
+   - *Known gap:* secondary bank account (NL74 RABO 3666 7097 88) may lag behind. If import date < period end, trigger manual import via Financieel > Bank en kas > Bankrekeningen > Afschriften > Import.
 2. Review and match unmatched items
 3. Document items that cannot be matched
 
@@ -44,6 +48,26 @@ Every month-end. Start at business day -5 relative to month-end.
 **2.5 Pre-Close Sign-Off**
 1. Review with Finance Lead
 2. Obtain sign-off
+
+### Step 2.6: Process All Entries (Verwerken)
+
+**Before starting the controlled close, all dagboek entries for the period must be processed.**
+
+1. Go to Financieel > Boekingen > Verwerken
+2. Select year and period
+3. Process each dagboek:
+   - 20 — Bank NL16 RABO
+   - 22 — Bank NL74 RABO
+   - 60 — Inkoopboek
+   - 70 — Verkoopboek
+   - 80 — Memoriaal Lonen
+   - 90 — Memoriaal
+   - 94 — Memoriaal uitgestelde omzet en kosten
+   - 95 — Activamutaties
+4. Verify: "Aantal te verwerken boekingen" = 0 for all dagboeken in the period
+5. Document: total entries processed per dagboek
+
+> **Gate:** Do not proceed to Step 3 until all entries show "Verwerkt". Unprocessed entries will not appear in trial balance, reconciliations, or financial reports.
 
 ### Step 3: Controlled Close
 
