@@ -21,6 +21,7 @@ Every month-end. Start at business day -5 relative to month-end.
 
 **2.1 Sales Invoice Sync**
 1. Run sync report from finance-automation
+   - *Until automation is live:* manually compare Zoho Books invoice count (Verkoop > Facturen, filter by period) to Exact Online posted sales invoice count (Verkoop > Verkoopfacturen > Overzicht, filter by period). Document both counts.
 2. Verify counts match between Zoho Books and Exact
 3. Review pending/failed items
 4. Resolve or defer exceptions (document each)
@@ -36,6 +37,7 @@ Every month-end. Start at business day -5 relative to month-end.
 
 **2.4 Exception Review**
 1. Review all open exceptions in GitHub
+   - *First governed close:* an empty exception register is expected. This step confirms no exceptions exist.
 2. Determine which can be resolved before close
 3. Document deferrals with justification
 
@@ -73,7 +75,7 @@ Every month-end. Start at business day -5 relative to month-end.
 
 **4.1 Financial Reviews**
 1. Balance sheet: review each account
-2. P&L: compare to budget and prior period, explain variances
+2. P&L: compare to budget (if loaded) and prior period, explain material variances. If no budget is available, compare to prior period only.
 3. VAT reconciliation
 4. Bank balance reconciliation
 5. Debtor and creditor balance reviews
@@ -91,7 +93,7 @@ Every month-end. Start at business day -5 relative to month-end.
 1. Finance Lead approval
 2. CFO approval (if required)
 3. Close period in Exact Online → verify status = "Closed"
-4. Archive close package
+4. Archive close package: save completed checklist, reconciliations, and evidence in `finance-runbooks/close/archive/YYYY-MM/` via PR
 5. Document lessons learned
 6. Create improvement issues in GitHub if applicable
 
