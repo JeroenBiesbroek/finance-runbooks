@@ -46,55 +46,44 @@
 | 1.5 | Review bank matching exceptions | Finance Lead | [ ] | Depends on 1.4 — after processing. |
 | 1.6 | Review open exception items | Claude Code | [x] | No exception issues in GitHub prior to this close. 1 new exception identified (task 1.1). |
 
-### Sync Exception: 9 Extra Entries in Exact Online
+### Sales Ledger Reconciliation Result (CTRL-SI-001)
 
-**Zoho Books has 20 invoices for January 2026. Exact Online dagboek 70 has 29 entries. Delta = +9 (Exact has more).**
+**Reconciliation completed 2026-04-05.** Full detail: `sales-ledger-reconciliation-2026-01.md`
 
-This is the opposite pattern from period 2 (where Zoho had 3 more than Exact).
+| Result | Count |
+|---|---|
+| Zoho invoices matched to Exact | **20/20 (100%)** |
+| Extra Exact entries — explained | 9 |
+| Extra type: later-period (Feb invoices in P1) | 7 |
+| Extra type: credit-note (Buse Gas, non-Zoho) | 1 |
+| Extra type: manual-entry (IO260054 Sterk) | 1 |
 
-**Likely causes for extra Exact entries:**
-- Credit notes booked in dagboek 70 (Verkoopboek also handles credit notes)
-- Invoices from December 2025 booked into January 2026 period
-- Manual corrections or reclassifications
-- Entries not originating from Zoho Books
+### CTRL-SI-001 Sign-Off — 2 Confirmations Required
 
-**Required action by Finance Lead:**
-1. List all 29 entries in dagboek 70 period 1 (12 verwerkt + 17 te verwerken)
-2. Match each to a Zoho Books invoice number
-3. Identify the 9 entries without Zoho match
-4. For each: classify as credit note, prior period, correction, or other
-5. Document findings
+| # | Item | Decision needed | Finance Lead response | Date |
+|---|---|---|---|---|
+| 1 | IO260054 Sterk B.V. (EUR 663,96) — manual dagboek 70 entry, no Zoho origin | Confirm this is an authorized direct entry | __________________ | __________ |
+| 2 | 7 February invoices booked into period 1 (total EUR 15.167,92) | Accept period 1 allocation, or rebook to period 2 | __________________ | __________ |
 
-### Verwerken Status — Partially Processed
+**After both confirmations are documented, CTRL-SI-001 can be signed off and Phase 2 may start.**
 
-Unlike period 2 (0% verwerkt), period 1 is **partially processed (21.5%)**:
-- Dagboek 60 (inkoop): 55% verwerkt (27/49)
-- Dagboek 70 (verkoop): 41% verwerkt (12/29)
-- Dagboek 94 (uitgestelde omzet): 51% verwerkt (25/49)
-- Dagboek 20/22 (bank): 0% verwerkt
-- Dagboek 95 (activa): 0% verwerkt
+### Verwerken Status — Still Required
 
-**Required action by Finance Lead:**
-1. Process remaining entries: Financieel > Boekingen > Verwerken, period 1
-2. Verify all dagboeken show 0 "Te verwerken" for period 1
-
-### Blockers
-
-**Blocker 1: Sync exception** — 9 extra Exact entries vs Zoho must be investigated.
-
-**Blocker 2: Verwerken** — 237 entries still unprocessed across all dagboeken.
+237 entries still unprocessed across all dagboeken (21.5% verwerkt). Finance Lead must process remaining entries before Phase 2: Financieel > Boekingen > Verwerken, period 1.
 
 ### Pre-Close Sign-Off
 
 **Pre-close sign-off:** __________________ Date: __________
 
-> Cannot be signed off until sync exception is investigated and all entries are processed.
+> Sign-off requires: (1) both CTRL-SI-001 confirmations documented above, (2) all dagboek entries verwerkt.
 
 ---
 
 ## Phase 2: Controlled Close
 
-**Status: BLOCKED — waiting for Phase 1 sign-off + verwerken**
+**Status: BLOCKED — waiting for Phase 1 sign-off (2 confirmations + verwerken)**
+
+> Phase 2 may start immediately after Phase 1 sign-off. Period 1 can proceed independently from period 2.
 
 | # | Task | Owner | Done | Notes |
 |---|---|---|---|---|
@@ -149,9 +138,11 @@ Unlike period 2 (0% verwerkt), period 1 is **partially processed (21.5%)**:
 
 ## Lessons Learned
 
-1. **Period 1 is partially processed (21.5%)**, unlike period 2 (0%). This suggests some processing was done earlier but not completed.
-2. **Dagboek 70 has MORE entries than Zoho Books** (29 vs 20). The delta direction is opposite from period 2 (where Zoho had more). This likely includes credit notes or prior-period entries.
-3. **Bank accounts (dagboek 20/22) are 0% processed** even though other dagboeken are partially processed.
+1. **Period 1 is partially processed (21.5%)**, unlike period 2 (0%). Some processing was done earlier but not completed.
+2. **Dagboek 70 +9 delta fully explained** by reconciliation: 7 later-period, 1 credit note, 1 manual entry. All 20 Zoho invoices present.
+3. **Cross-period booking pattern discovered:** February invoices systematically booked into Exact period 1. This is a structural pattern, not an error — but it must be a conscious Finance Lead decision.
+4. **Buse Gas B.V. exists as debtor in Exact (code 81) but NOT in Zoho Books.** Some invoicing/credit notes happen directly in Exact, outside the Zoho sync flow.
+5. **Bank accounts (dagboek 20/22) are 0% processed** even though other dagboeken are partially processed.
 
 ## Improvement Items
 <!-- List improvement issues created -->
