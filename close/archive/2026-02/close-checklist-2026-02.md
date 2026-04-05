@@ -46,37 +46,39 @@
 | 1.5 | Review bank matching exceptions | Finance Lead | [ ] | Depends on 1.4 — after processing. |
 | 1.6 | Review open exception items | Claude Code | [x] | No exception issues in GitHub prior to this close. 1 new exception identified (task 1.1). |
 
-### Sync Exception: 3 Missing Invoices
+### Sales Ledger Reconciliation Result (CTRL-SI-001)
 
-**Zoho Books has 28 invoices for February 2026. Exact Online dagboek 70 has 25 entries. Delta = 3.**
+**Reconciliation completed 2026-04-05.** Full detail: `sales-ledger-reconciliation-2026-02.md`
 
-**Required action by Finance Lead:**
-1. Identify which 3 Zoho Books invoices are missing from Exact Online dagboek 70
-2. For each missing invoice, determine:
-   - Is it entered in a different dagboek or period?
-   - Was it skipped intentionally?
-   - Does it need to be entered?
-3. Resolve or document each as a deferral with justification
+| Result | Count |
+|---|---|
+| Zoho invoices matched in P2 | 18/28 |
+| Zoho invoices found in P1 (cross-period) | 6/28 |
+| Missing from Exact entirely | 1 (INV-000269, EUR 86K) |
+| Amount mismatch | 1 (INV-000274, EUR 125,93 diff) |
+| Possible duplicates (P1+P2) | 2 (INV-000259, INV-000272) |
 
-**Materiality assessment:** 28 invoices total, 3 missing = 10.7% gap. This exceeds the 5% threshold for investigation per the governed handoff document (section 14: monitoring).
+### 4 Open Exceptions — See `exception-resolution-2026-02.md`
+
+| # | Exception | Amount | Owner | Status |
+|---|---|---|---|---|
+| 1 | INV-000269 AsfaltNu Amsterdam I — missing | 86.394,00 | Thijs → FL | Open |
+| 2 | INV-000274 Sterk — amount mismatch | 125,93 diff | Finance Lead | Open |
+| 3 | INV-000259 Bredenoord — possible duplicate | 1.861,37 | Finance Lead | Open |
+| 4 | INV-000272 Gebr. van der Poel — possible duplicate | 754,79 | Finance Lead | Open |
 
 ### Blockers
 
-**Blocker 1: Sync exception** — 3 missing invoices must be investigated before pre-close sign-off.
+**Blocker 1:** 4 exceptions must be resolved before CTRL-SI-001 sign-off.
 
-**Blocker 2: Verwerken** — ALL entries in Exact Online period 2 have status "Te verwerken" (0 verwerkt). Finance Lead must process all entries before Phase 2 can begin.
-
-**Required actions by Finance Lead:**
-1. Investigate the 3 missing invoices (sync exception)
-2. Process (verwerken) all entries for period 2: Financieel > Boekingen > Verwerken
-3. Verify bank import covers through 28-02-2026 for both RABO accounts
-4. Sign off on pre-close
+**Blocker 2:** ALL entries in period 2 remain te verwerken (0 verwerkt). Finance Lead must process all entries.
 
 ### Pre-Close Sign-Off
 
 **Pre-close sign-off:** __________________ Date: __________
 
-> Cannot be signed off until sync exception is resolved and all entries are processed.
+> Cannot be signed off until all 4 exceptions are resolved and all entries are verwerkt.
+> Period 2 proceeds independently from period 1.
 
 ---
 
