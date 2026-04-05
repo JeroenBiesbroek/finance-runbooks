@@ -41,12 +41,14 @@
 
 ### Exit Criteria
 - All source data complete in Exact Online (sales invoices, purchases, bank)
+- All dagboek entries for the period processed (verwerkt) — 0 te verwerken
 - All exceptions triaged: resolved or deferred with documented justification
 - Finance Lead sign-off on pre-close
 
 ### Required Evidence
-- Sync report showing Zoho Books count = Exact Online count
-- Bank statement import confirmation
+- Sync report: Zoho Books invoice count (Verkoop > Facturen) = Exact Online dagboek 70 count
+- Bank statement import confirmation (last import date per account >= period end date)
+- Verwerken confirmation: screenshot or count showing 0 "te verwerken" entries for the period
 - Exception register status (open/deferred/resolved counts)
 - Pre-close sign-off (name + date)
 
@@ -65,6 +67,7 @@
 ### Entry Criteria
 - Phase 1 completed with sign-off
 - All source data confirmed complete
+- **All dagboek entries for the period processed (verwerkt) in Exact Online** — verify via Financieel > Boekingen > Overzicht: "Aantal te verwerken" = 0 for all dagboeken in the period
 - Journal entry templates available (from `finance-config-catalog/journals/`)
 
 ### Tasks
