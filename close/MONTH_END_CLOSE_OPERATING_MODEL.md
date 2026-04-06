@@ -117,26 +117,33 @@
 
 | # | Task | Owner | Template |
 |---|---|---|---|
-| 3.1 | Balance sheet review: every account reviewed and explained | Finance Lead | — |
-| 3.2 | P&L review: compare to budget and prior period, explain material variances | Finance Lead | — |
-| 3.3 | VAT reconciliation | Finance Lead | `templates/reconciliation-template.md` |
-| 3.4 | Bank balance reconciliation (Exact vs statement) | Finance Lead | `templates/reconciliation-template.md` |
-| 3.5 | Debtor balance review | Finance Lead | — |
-| 3.6 | Creditor balance review | Finance Lead | — |
-| 3.7 | Variance analysis (material items) | Finance Lead | — |
-| 3.8 | Control checklist review | Finance Lead | `templates/control-assessment-template.md` |
+| 3.1 | Complete balance sheet specifications | Finance Lead | `templates/balance-sheet-specification-template.md` |
+| 3.2 | Complete P&L specifications | Finance Lead | `templates/p-and-l-specification-template.md` |
+| 3.3 | Complete analytical review | Finance Lead | `templates/analytical-review-template.md` |
+| 3.4 | VAT reconciliation | Finance Lead | `templates/reconciliation-template.md` |
+| 3.5 | Bank balance reconciliation (Exact vs statement) | Finance Lead | `templates/reconciliation-template.md` |
+| 3.6 | Complete supporting evidence index | Finance Lead | `templates/supporting-evidence-index-template.md` |
+| 3.7 | Control checklist review | Finance Lead | `templates/control-assessment-template.md` |
+| 3.8 | Complete review sign-off and exception log | Finance Lead | `templates/review-signoff-and-exception-log-template.md` |
+
+> **Dossier standard:** All specifications, analytical review, evidence index, and sign-off must meet the requirements in `close/MONTH_END_REPORTING_DOSSIER_STANDARD.md`.
 
 ### Exit Criteria
-- All balance sheet accounts reviewed; no unexplained balances
-- All material P&L variances explained
-- VAT and bank reconciliations completed and balanced (or exceptions documented)
-- Control checklist completed
+- All balance sheet accounts specified per dossier standard (including fixed asset rollforward, debtor aging, bank reconciliation, VAT reconciliation, accruals)
+- All P&L lines specified with month, YTD, prior month, prior year comparisons
+- Analytical review completed: all variances exceeding thresholds explained
+- Evidence index complete — every specification traces to evidence
+- Exception log: all items resolved or accepted with justification
 - Finance Lead sign-off on review close
 
 ### Required Evidence
-- Completed reconciliations (VAT, bank, debtor, creditor)
-- Variance analysis with explanations
+- Completed BS specifications with evidence per account area
+- Completed P&L specifications with variance explanations
+- Completed analytical review
+- Completed evidence index
+- Completed reconciliations (VAT, bank)
 - Control assessment results
+- Exception log (final)
 - Review close sign-off (name + date)
 
 ### Exception Path
@@ -153,8 +160,9 @@
 
 ### Entry Criteria
 - Phase 3 completed with sign-off
+- Reporting dossier complete per `close/MONTH_END_REPORTING_DOSSIER_STANDARD.md`
 - All reviews completed, no unresolved material issues
-- Close package assembled
+- Exception log: all close-blocking exceptions resolved or accepted
 
 ### Tasks
 
@@ -173,17 +181,20 @@
 - Lessons learned documented
 - Improvement issues created (if any)
 
-### Required Evidence
-- Close package containing:
-  1. Completed close checklist
-  2. Journal entry listing with support
-  3. Reconciliations (bank, VAT, debtor, creditor)
-  4. Variance analysis
-  5. Exception register status
-  6. Control assessment results
-  7. Approval evidence (Finance Lead + CFO)
-  8. Lessons learned
+### Required Evidence — Reporting Dossier
+- Close package = reporting dossier, containing:
+  1. Completed close checklist (all 4 phases signed off)
+  2. Balance sheet specifications (per BS specification template)
+  3. P&L specifications (per P&L specification template)
+  4. Analytical review (per analytical review template)
+  5. Supporting evidence index (complete, all items present)
+  6. Review sign-off and exception log (all exceptions resolved or accepted)
+  7. Reconciliations (bank, VAT — completed templates)
+  8. Control assessment results
+  9. Approval evidence (Finance Lead + CFO)
+  10. Lessons learned
 - Period close confirmation from Exact Online
+- Dossier archived in `close/archive/YYYY-MM/`
 
 ### Exception Path
 - If CFO does not approve: document objections, return to relevant phase

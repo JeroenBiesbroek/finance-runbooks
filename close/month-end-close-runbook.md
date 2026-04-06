@@ -97,27 +97,47 @@ Every month-end. Start at business day -5 relative to month-end.
 
 ### Step 4: Review Close
 
-**4.1 Financial Reviews**
-1. Balance sheet: review each account
-2. P&L: compare to budget (if loaded) and prior period, explain material variances. If no budget is available, compare to prior period only.
-3. VAT reconciliation
-4. Bank balance reconciliation
-5. Debtor and creditor balance reviews
+**4.1 Reporting Dossier — Specifications**
+1. Complete balance sheet specifications using `templates/balance-sheet-specification-template.md`:
+   - Fixed asset rollforward (investments, disinvestments, depreciation)
+   - Debtor aging + post-period cash collection review
+   - Bank reconciliation (GL vs statement)
+   - Creditor aging
+   - VAT reconciliation (GL vs BTW-aangifte)
+   - Prepayments and accrued liabilities with calculation basis
+2. Complete P&L specifications using `templates/p-and-l-specification-template.md`:
+   - Revenue by category (month, YTD, prior month, prior year)
+   - Direct costs and gross margin
+   - Operating expenses by category
+   - Depreciation reconciliation to asset rollforward
+   - Salary cost reconciliation to payroll
+   - Unusual / manual items explained
 
-**4.2 Control Review**
+**4.2 Reporting Dossier — Analytical Review**
+1. Complete analytical review using `templates/analytical-review-template.md`
+2. Explain all variances exceeding thresholds (> 10% AND > EUR 2.500 for P&L; > EUR 2.500 for BS)
+3. Complete gross margin analysis and top-5 customer shift analysis
+
+**4.3 Evidence and Exception Log**
+1. Complete supporting evidence index using `templates/supporting-evidence-index-template.md`
+2. Complete review sign-off and exception log using `templates/review-signoff-and-exception-log-template.md`
+3. Resolve or accept all exceptions
+
+**4.4 Control Review**
 1. Complete control checklist
 2. Document any control failures
 
-**4.3 Review Close Sign-Off**
-1. Compile results, escalate unresolved issues
-2. Obtain Finance Lead sign-off
+**4.5 Review Close Sign-Off**
+1. Verify dossier meets standard: `close/MONTH_END_REPORTING_DOSSIER_STANDARD.md`
+2. Compile results, escalate unresolved issues
+3. Obtain Finance Lead sign-off
 
 ### Step 5: Final Close
 
 1. Finance Lead approval
 2. CFO approval (if required)
 3. Close period in Exact Online → verify status = "Closed"
-4. Archive close package: save completed checklist, reconciliations, and evidence in `finance-runbooks/close/archive/YYYY-MM/` via PR
+4. Archive reporting dossier: save complete dossier (checklist, specifications, analytical review, evidence index, sign-off log) in `finance-runbooks/close/archive/YYYY-MM/` via PR
 5. Document lessons learned
 6. Create improvement issues in GitHub if applicable
 
