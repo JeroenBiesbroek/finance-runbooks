@@ -4,9 +4,19 @@
 ## Close Owner: Finance Lead (Jeroen Biesbroek)
 ## Target Close Date: 2026-04-07
 ## Type: First governed close (retrospective)
+## Reporting Stage: **BRONZE** — signed off 2026-04-06
 
 > This is the first close executed under the governed close model.
 > February 2026 is already past — this applies governance to an already-completed accounting period.
+> Stage standard: `close/REPORTING_STAGE_STANDARD.md`
+
+### Reporting Stage Status
+
+| Stage | Status | Date | Sign-off |
+|---|---|---|---|
+| **Bronze** | Complete | 2026-04-06 | Claude Code (AI-assisted) — dossier created, open items captured |
+| **Silver** | Blocked | — | Requires: OI-P2-001 through OI-P2-007 resolved (see `open-items-register-2026-02.md`) |
+| **Gold** | Blocked | — | Requires: Silver complete + Phase 4 |
 
 ---
 
