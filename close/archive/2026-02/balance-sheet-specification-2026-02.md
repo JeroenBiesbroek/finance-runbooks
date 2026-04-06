@@ -64,6 +64,37 @@
 
 ## Debtors (1300-1399)
 
+### Bronze — Preliminary Debtor Position from Zoho/Exact Source
+
+> **BRONZE NOTE:** Aging buckets require processed debtor subledger from Exact (Silver). At Bronze, we show the known invoice population from the sales ledger reconciliation. Amounts are incl BTW.
+> **MATERIAL EXCEPTION:** INV-000269 AsfaltNu Amsterdam I (EUR 86.394) — debtor not in Exact. Must be created and booked before debtor position is complete. This is 39% of total February invoiced revenue.
+
+| Source | Amount incl BTW | # of invoices | Notes |
+|---|---|---|---|
+| Zoho February invoices matched in Exact P2 | EUR 119.917,30 | 20 | Verified — E-01 |
+| INV-000274 Sterk partial in P2 | EUR 280,83 | 1 (partial) | Amount mismatch — see OI-P2-002 |
+| **INV-000269 AsfaltNu Amsterdam I — NOT IN EXACT** | **EUR 86.394,00** | **1** | **Debtor does not exist — OI-P2-001** |
+| **Total Zoho February (excl cross-period)** | **EUR 206.592,13** | **22** | Pre-verwerken; cross-period invoices tracked in P1 |
+
+### Debtor population by customer — Bronze / Zoho source
+
+| Customer | Debtor code | Amount incl BTW | # invoices | Notes |
+|---|---|---|---|---|
+| AsfaltNu Amsterdam I | **NONE** | EUR 86.394,00 | 1 | **MISSING — debtor must be created (OI-P2-001)** |
+| AsfaltNu C.V. | 410 | EUR 27.104,00 | 1 | In Exact P2 only (excl EUR 532,40 cross-period in P1) |
+| BAM Energie & Water | 415 | EUR 18.478,78 | 4 | In Exact P2 (excl EUR 3.882,20 cross-period in P1) |
+| Boskalis Nederland | 416 | EUR 19.914,71 | 3 | In Exact P2 (excl EUR 1.561,55 cross-period in P1) |
+| Koninklijke Van Twist | 424 | EUR 15.118,95 | 2 | |
+| Hanab Energy Solutions | 417 | EUR 13.003,79 | 3 | |
+| Sterk B.V. | 414 | EUR 12.488,04 | 3 | Excl INV-000274 partial (EUR 280,83) + P1 portion |
+| Gebr. van der Poel | 413 | EUR 3.347,66 | 1 | INV-000293 only; excl cross-period/duplicates in P1 |
+| GMB Civiel B.V. | 411 | EUR 5.761,78 | 2 | |
+| Comb. Dijkalliantie | 412 | EUR 4.699,59 | 1 | |
+| Bredenoord B.V. | 419 | — | 0 | In P2 Exact (26700041) but possible duplicate of P1 entry — OI-P2-003 |
+
+> **Source:** `sales-ledger-reconciliation-2026-02.md` — line-level matched data.
+> **Limitation:** This shows invoiced amounts, not open debtor balances. Payments received during February reduce the actual debtor balance. Actual aging requires Exact debtor subledger export after verwerken.
+
 ### Aging at period end
 
 | Aging bucket | Amount | # of invoices | Notes |
@@ -74,9 +105,7 @@
 | > 90 days | | | |
 | **Total** | | | |
 
-> **Known data:** 28 Zoho invoices for February. 25 Exact dagboek 70 entries (0 verwerkt).
-> **MATERIAL EXCEPTION:** INV-000269 AsfaltNu Amsterdam I (EUR 86.394) — debtor not in Exact. Must be created and booked before debtor aging is complete.
-> Sales ledger reconciliation: see E-01.
+> Populate from Exact debtor aging export at Silver (E-18).
 
 ### Post-period cash collection review
 
@@ -84,13 +113,21 @@
 |---|---|---|---|---|
 | | | | | |
 
-> Review first 10 business days after 28-02-2026.
+> Review first 10 business days after 28-02-2026. Requires bank data (E-20). Silver.
 
 ### Major open items (> EUR 5.000)
 
 | Customer | Invoice | Amount | Age | Status | Action |
 |---|---|---|---|---|---|
-| AsfaltNu Amsterdam I | INV-000269 | EUR 86.394,00 | N/A — not yet booked | Exception #1 | Create debtor in Exact, book invoice |
+| AsfaltNu Amsterdam I | INV-000269 | EUR 86.394,00 | N/A — not yet booked | **CRITICAL** — OI-P2-001 | Create debtor in Exact, then book invoice |
+| AsfaltNu C.V. | INV-000246 | EUR 27.104,00 | — | Invoiced 01-02, matched in Exact | Monitor collection |
+| Boskalis Nederland | 3 invoices | EUR 19.914,71 | — | All matched in Exact P2 | Monitor collection |
+| BAM Energie & Water | 4 invoices | EUR 18.478,78 | — | All matched in Exact P2 | Monitor collection |
+| Koninklijke Van Twist | 2 invoices | EUR 15.118,95 | — | Matched in Exact P2 | Monitor collection |
+| Hanab Energy Solutions | 3 invoices | EUR 13.003,79 | — | Matched in Exact P2 | Monitor collection |
+| Sterk B.V. | 3 invoices | EUR 12.488,04 | — | Matched (excl partial) | Monitor; resolve OI-P2-002 |
+
+> **Note:** Open amounts are preliminary (incl BTW, before payments). INV-000269 alone represents EUR 86K exposure.
 
 ### Evidence
 - [ ] Debtor aging report from Exact Online → E-18
