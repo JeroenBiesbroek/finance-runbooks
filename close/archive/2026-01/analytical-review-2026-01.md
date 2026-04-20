@@ -4,15 +4,44 @@
 ## Prepared by: <!-- Finance Lead -->
 ## Date: <!-- YYYY-MM-DD — populate after Phase 3 start -->
 
-**Status: BLOCKED — requires completed trial balance from Phase 2**
+**Reporting stage: BRONZE**
 
-> This file is the instantiated analytical review for period 1.
-> Populate during Phase 3 after all Phase 2 journals are posted and trial balance is exported.
-> Note: January 2026 is the first month of FY 2026.
-> - Prior month = December 2025 (period 12 prior year)
-> - YTD = current month (January only)
-> - Prior year YTD = January 2025
+> Full analytical review (all 5 mandatory comparisons with trial balance data) is a Silver deliverable.
+> At Bronze, this file documents what is already assessable and provides the first revenue-level observations.
 > Evidence references: use E-codes from `supporting-evidence-index-2026-01.md`
+
+---
+
+## Bronze Scope — What Can and Cannot Be Assessed
+
+### What Bronze can already assess
+
+| Assessment | Source | Available |
+|---|---|---|
+| Revenue population completeness | Zoho Books + Exact dagboek 70 reconciliation | **Yes — E-01 complete** |
+| Revenue by customer (incl BTW) | Zoho invoice data | **Yes — 20 invoices, EUR 122.602,87** |
+| Customer concentration risk | Zoho invoice data | **Yes — top 2 customers = 45% of revenue** |
+| Cross-period booking impact on revenue | Reconciliation exception analysis | **Yes — EUR 15.167,92 from P2 booked in P1** |
+| Unusual/manual revenue items | Reconciliation exception analysis | **Yes — IO260054 Sterk EUR 663,96 + Buse Gas credit EUR -1.612,24** |
+
+### What Bronze cannot assess yet
+
+| Assessment | Blocked by | Available at |
+|---|---|---|
+| Revenue by GL category (excl BTW) | Trial balance not available (E-12) | Silver |
+| P&L month vs prior month (all lines) | Trial balance + December 2025 data | Silver |
+| P&L YTD vs prior year YTD | Trial balance + January 2025 data | Silver |
+| Balance sheet movement analysis | Trial balance | Silver |
+| Gross margin % | Revenue + direct cost data from trial balance | Silver |
+| All 5 mandatory comparisons with thresholds | Trial balance | Silver |
+
+### Bronze Revenue Observations — Period 1
+
+1. **Total Zoho January revenue (incl BTW): EUR 122.602,87** from 20 invoices across 11 customers.
+2. **Customer concentration:** Top 2 customers (Hanab EUR 29K + AsfaltNu C.V. EUR 26K) represent 45% of January Zoho revenue. Top 5 represent 82%.
+3. **Cross-period revenue:** EUR 15.167,92 (7 February invoices) booked into period 1 in Exact. If kept in P1, total dagboek 70 revenue = EUR 136.822,51. If rebooked to P2, the impact is a 12% reduction in P1 revenue.
+4. **Unusual items:** 1 manual entry (EUR 663,96) + 1 credit note for non-Zoho customer (EUR -1.612,24). Net impact: EUR -948,28. Immaterial relative to total revenue.
+5. **No prior month available at Bronze.** January is the first period under governed close. December 2025 comparison requires Exact trial balance.
 
 ---
 
@@ -20,11 +49,11 @@
 
 | # | Comparison | Scope | Threshold for explanation | Status |
 |---|---|---|---|---|
-| 1 | Current month vs prior month | All P&L lines | > 10% AND > EUR 2.500 | Blocked — no data yet |
-| 2 | YTD vs prior year YTD | All P&L lines | > 10% AND > EUR 5.000 | Blocked — no data yet |
-| 3 | Current month BS vs prior month BS | All BS lines | Change > EUR 2.500 | Blocked — no data yet |
-| 4 | Gross margin % current vs prior month | Margin line | > 5 percentage points | Blocked — no data yet |
-| 5 | Revenue by customer — top 5 shift | Revenue | Customer drops from top 5 or new entry | Blocked — no data yet |
+| 1 | Current month vs prior month | All P&L lines | > 10% AND > EUR 2.500 | Silver — requires trial balance |
+| 2 | YTD vs prior year YTD | All P&L lines | > 10% AND > EUR 5.000 | Silver — requires trial balance |
+| 3 | Current month BS vs prior month BS | All BS lines | Change > EUR 2.500 | Silver — requires trial balance |
+| 4 | Gross margin % current vs prior month | Margin line | > 5 percentage points | Silver — requires trial balance |
+| 5 | Revenue by customer — top 5 shift | Revenue | Customer drops from top 5 or new entry | **Partial at Bronze** — Zoho data available for current month, no prior month yet |
 
 ---
 

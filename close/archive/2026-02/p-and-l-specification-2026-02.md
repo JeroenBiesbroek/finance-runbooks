@@ -33,21 +33,39 @@
 | 8800 | Omzet honorarium | | | | | | | |
 | | **Total revenue** | | | | | | | |
 
-> **Known data:** 28 Zoho invoices for February, 25 Exact dagboek 70 entries (0 verwerkt).
-> **Cross-period note:** 6 February Zoho invoices were found in Exact period 1 — verify revenue allocation.
-> **Material item:** INV-000269 (EUR 86.394) not yet booked — once booked, will materially affect revenue.
+> **BRONZE NOTE — Revenue by GL category:** Category-level breakdown requires trial balance (Silver). The total below is derived from Zoho invoice amounts only. GL-level split will be populated after verwerken + trial balance export.
 
-### Revenue by customer (top 5 by month)
+### Bronze — Preliminary Revenue from Zoho Source
 
-| Customer | Current month | Prior month (Jan) | Change | Notes |
+| Source | Amount incl BTW | Invoices | Status |
+|---|---|---|---|
+| Zoho February invoices matched in Exact P2 | **EUR 115.404,51** | 18 | Verified — all matched in dagboek 70 |
+| Zoho February invoices also matched in P2 (separate section) | EUR 3.347,66 | 1 | INV-000293, matched at correct amount |
+| Zoho February invoice INV-000325 in P2 | EUR 1.165,13 | 1 | Matched in P2 |
+| Cross-period: 6 February invoices booked in P1 | EUR 14.034,53 | 6 | Pending allocation decision (OI-P2-007) |
+| INV-000274 Sterk partial in P2 | EUR 280,83 | 1 (partial) | Amount mismatch — Zoho total 1.540,15, see OI-P2-002 |
+| **INV-000269 AsfaltNu Amsterdam I — MISSING** | **EUR 86.394,00** | **1** | **Not in Exact — debtor does not exist (OI-P2-001)** |
+| **Total Zoho February invoices** | **EUR 221.885,98** | **28** | Preliminary — includes EUR 86K not yet in Exact |
+| **Of which currently in Exact P2** | **EUR 120.198,13** | **21** | Excluding cross-period and missing |
+
+> **Material risk:** EUR 86.394 (39% of total February revenue) is not yet booked in Exact. This single item dominates the revenue position.
+> **Limitation:** Amounts are incl BTW, not net revenue per GL. Actual P&L revenue (excl BTW) requires trial balance.
+
+### Revenue by customer (top 5 by month) — Bronze / Zoho source
+
+| Customer | Current month (Zoho incl BTW) | Prior month (Jan — Zoho) | Change | Notes |
 |---|---|---|---|---|
-| 1. | | | | |
-| 2. | | | | |
-| 3. | | | | |
-| 4. | | | | |
-| 5. | | | | |
-| Other | | | | |
-| **Total** | | | | |
+| 1. AsfaltNu Amsterdam I | EUR 86.394,00 | — (new customer) | N/A | **MISSING FROM EXACT** — OI-P2-001 |
+| 2. AsfaltNu C.V. | EUR 27.636,40 | EUR 26.378,00 | +EUR 1.258,40 | Incl EUR 532,40 in P1 (cross-period) |
+| 3. BAM Energie & Water | EUR 22.360,98 | EUR 18.464,99 | +EUR 3.896,00 | Incl EUR 3.882,20 in P1 |
+| 4. Boskalis Nederland | EUR 21.476,26 | EUR 21.012,95 | +EUR 463,31 | Incl EUR 1.561,55 in P1 |
+| 5. Koninklijke Van Twist | EUR 15.118,95 | EUR 2.768,87 | +EUR 12.350,08 | New in top 5 — displaces GMB Civiel |
+| Other (6 customers) | EUR 48.899,39 | EUR 53.978,06 | -EUR 5.078,67 | Sterk, Hanab, Gebr. vd Poel, GMB, Comb. Dijkalliantie, Bredenoord |
+| **Total (Zoho Feb)** | **EUR 221.885,98** | **EUR 122.602,87** | **+EUR 99.283,11** | **+81% — driven primarily by INV-000269 (EUR 86K)** |
+
+> **Source:** `sales-ledger-reconciliation-2026-02.md` + `sales-ledger-reconciliation-2026-01.md`.
+> **Key observation:** February Zoho revenue is EUR 99K higher than January. EUR 86K (87% of the increase) comes from a single unbooked invoice. Without INV-000269, February revenue would be EUR 135.492 vs January EUR 122.603 (+10.5%).
+> **Amounts are incl BTW.** Net revenue figures will replace these at Silver.
 
 ### Material variance explanations (> 10% or > EUR 2.500)
 
@@ -69,8 +87,15 @@
 
 | GL | Category | Current month | Prior month (Jan) | Change | Change % | YTD | Prior year YTD |
 |---|---|---|---|---|---|---|---|
-| | | | | | | | |
+| 7000 | Inkoopkosten grondstoffen | | | | | | |
+| 7001 | Inkoopkosten gas | | | | | | |
+| 7002 | Inkoopkosten transport | | | | | | |
+| 7003 | Inkoopkosten onderhoud | | | | | | |
+| 7004 | Inkoopkosten overig | | | | | | |
 | | **Total direct costs** | | | | | | |
+
+> **BRONZE NOTE — Direct cost GL structure:** The GL accounts above are placeholders based on the standard 7000-series. The actual GL accounts used by Powercrumbs in Exact must be confirmed from the trial balance at Silver. Finance Lead: verify and correct these account codes after verwerken.
+> **Known data:** Dagboek 60 (Inkoopboek): 71 entries, 0 verwerkt. Purchase invoice amounts are not yet extracted at line level.
 
 ### Gross margin
 
