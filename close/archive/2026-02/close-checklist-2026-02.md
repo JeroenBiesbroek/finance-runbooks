@@ -105,16 +105,22 @@
 
 **Status: BLOCKED — waiting for Phase 2**
 
+> **Dossier requirement:** Phase 3 produces the BS/P&L specifications, analytical review, and finalizes the evidence index.
+> All dossier files are in `close/archive/2026-02/`. See `close-package-index.md` for full artifact tracking.
+> **P1 dependency:** Analytical review requires January 2026 trial balance for prior-month comparison.
+
 | # | Task | Owner | Done | Notes |
 |---|---|---|---|---|
-| 3.1 | Balance sheet review — each account | Finance Lead | [ ] | |
-| 3.2 | P&L review — compare to prior period | Finance Lead | [ ] | Compare to January 2026 (period 1) |
-| 3.3 | VAT reconciliation | Finance Lead | [ ] | Use templates/reconciliation-template.md |
-| 3.4 | Bank balance reconciliation | Finance Lead | [ ] | Exact GL balance vs bank statement at 28-02-2026 |
-| 3.5 | Debtor balance review | Finance Lead | [ ] | |
-| 3.6 | Creditor balance review | Finance Lead | [ ] | |
-| 3.7 | Variance analysis — explain material items | Finance Lead | [ ] | |
-| 3.8 | Control checklist review | Finance Lead | [ ] | Use templates/control-assessment-template.md |
+| 3.1 | Export trial balance from Exact Online (BS + P&L) | Finance Lead | [ ] | Required input for all specifications — evidence E-12 |
+| 3.2 | Complete balance sheet specifications | Finance Lead | [ ] | Populate `balance-sheet-specification-2026-02.md` from trial balance |
+| 3.3 | Complete P&L specifications | Finance Lead | [ ] | Populate `p-and-l-specification-2026-02.md` from trial balance |
+| 3.4 | Complete analytical review (5 mandatory comparisons) | Finance Lead | [ ] | Populate `analytical-review-2026-02.md` — prior month = Jan 2026 |
+| 3.5 | VAT reconciliation | Finance Lead | [ ] | Use `templates/reconciliation-template.md` — evidence E-17 |
+| 3.6 | Bank balance reconciliation | Finance Lead | [ ] | GL balance vs bank statement at 28-02-2026 — evidence E-16 |
+| 3.7 | Debtor aging + post-period cash review | Finance Lead | [ ] | Export aging from Exact — evidence E-18, E-20. Note INV-000269 material item |
+| 3.8 | Creditor aging review | Finance Lead | [ ] | Export aging from Exact — evidence E-19 |
+| 3.9 | Finalize evidence index | Finance Lead | [ ] | Complete all items in `supporting-evidence-index-2026-02.md` |
+| 3.10 | Control checklist review | Finance Lead | [ ] | Use `templates/control-assessment-template.md` |
 
 **Review close sign-off:** __________________ Date: __________
 
@@ -124,14 +130,19 @@
 
 **Status: BLOCKED — waiting for Phase 3**
 
+> **Dossier completeness gate:** Phase 4 may not start until all conditions in the dossier completeness gate are met.
+> See `close-package-index.md` → Dossier Completeness Gate section.
+
 | # | Task | Owner | Done | Notes |
 |---|---|---|---|---|
-| 4.1 | Finance Lead approval | Finance Lead | [ ] | |
-| 4.2 | CFO approval (if required) | CFO | [ ] | |
-| 4.3 | Close period in Exact Online — verify status = "Closed" | Finance Lead | [ ] | |
-| 4.4 | Archive close package in close/archive/2026-02/ | Finance Lead | [ ] | Commit completed checklist + evidence via PR |
-| 4.5 | Document lessons learned | Finance Lead | [ ] | |
-| 4.6 | Create improvement issues in GitHub | Finance Lead | [ ] | |
+| 4.1 | Verify dossier completeness gate | Finance Lead | [ ] | All BS/P&L specs, analytical review, evidence index, exception log complete |
+| 4.2 | Close exception log — all items resolved or accepted | Finance Lead | [ ] | Update `review-signoff-exception-log-2026-02.md` |
+| 4.3 | Finance Lead approval | Finance Lead | [ ] | Sign off in `review-signoff-exception-log-2026-02.md` |
+| 4.4 | CFO approval (if material exceptions) | CFO | [ ] | Required — INV-000269 (EUR 86K) is material |
+| 4.5 | Close period in Exact Online — verify status = "Closed" | Finance Lead | [ ] | Screenshot as evidence E-27 |
+| 4.6 | Archive close package in close/archive/2026-02/ | Finance Lead | [ ] | Commit all dossier files via PR |
+| 4.7 | Document lessons learned | Finance Lead | [ ] | |
+| 4.8 | Create improvement issues in GitHub | Finance Lead | [ ] | |
 
 **Final close sign-off:** __________________ Date: __________
 
