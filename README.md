@@ -20,16 +20,18 @@ Operational procedures and templates for finance operations. Follow a runbook st
 
 ## Key Documents
 
-| Document | Purpose |
-|---|---|
-| [MONTH_END_CLOSE_OPERATING_MODEL.md](close/MONTH_END_CLOSE_OPERATING_MODEL.md) | Executable 4-phase close model with entry/exit criteria |
-| [month-end-close-runbook.md](close/month-end-close-runbook.md) | Step-by-step close procedure |
+Month-end close documentation (operating model, runbook, reporting-stage
+standard, dossier standard, and the archived closes for 2026-01/2026-02)
+moved to the **Maandafsluiting** module in
+[`Powercrumbs/forecast`](https://github.com/Powercrumbs/forecast/tree/main/docs/maandafsluiting),
+which now also runs the checklist/exception tracking these documents
+describe.
 
 ## Operational Templates
 
 | Template | Purpose | Location |
 |---|---|---|
-| Close checklist | Period close task tracking | [templates/close-checklist-template.md](templates/close-checklist-template.md) |
+| Close checklist | Period close task tracking | [Powercrumbs/forecast — docs/maandafsluiting/close-checklist-template.md](https://github.com/Powercrumbs/forecast/blob/main/docs/maandafsluiting/close-checklist-template.md) |
 | Control assessment | Control effectiveness review | [templates/control-assessment-template.md](templates/control-assessment-template.md) |
 | Exception analysis | Exception investigation and resolution | [templates/exception-analysis-template.md](templates/exception-analysis-template.md) |
 | Reconciliation | Balance reconciliation (bank, VAT, debtor, creditor) | [templates/reconciliation-template.md](templates/reconciliation-template.md) |
