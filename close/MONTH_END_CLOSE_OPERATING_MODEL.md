@@ -225,11 +225,25 @@
 | Cannot be resolved, material | Escalate | CFO |
 | New exception during review phase | Assess materiality, resolve or defer | Finance Lead |
 
+## Reporting Stages
+
+Each period progresses through three reporting stages (Bronze → Silver → Gold) as defined in `close/REPORTING_STAGE_STANDARD.md`. The stages overlay the 4-phase model:
+
+| Close phase | Stage transition |
+|---|---|
+| Phase 1 complete | → **Bronze** (dossier created, open items captured) |
+| Phases 2-3 complete | → **Silver** (specifications populated, reconciliations done) |
+| Phase 4 complete | → **Gold** (period locked, dossier archived) |
+
+Bronze allows the close to produce value early — creating the dossier and capturing all known issues — without waiting for all blocking items to be resolved. Open items are tracked in the period's open-items register (`open-items-register-YYYY-MM.md`).
+
 ## Related Documents
 
 - Close checklist template: `templates/close-checklist-template.md`
 - Reconciliation template: `templates/reconciliation-template.md`
 - Control assessment template: `templates/control-assessment-template.md`
 - Exception analysis template: `templates/exception-analysis-template.md`
+- Open-items register template: `templates/open-items-register-template.md`
+- Reporting stage standard: `close/REPORTING_STAGE_STANDARD.md`
 - Exception catalog: `finance-config-catalog/exceptions/exception-catalog.md`
 - Control matrix: `finance-config-catalog/controls/FINANCE_CONTROL_MATRIX.md`

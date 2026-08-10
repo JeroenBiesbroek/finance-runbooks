@@ -63,6 +63,38 @@
 
 ## Debtors (1300-1399)
 
+### Bronze — Preliminary Debtor Position from Zoho/Exact Source
+
+> **BRONZE NOTE:** Aging buckets require processed debtor subledger from Exact (Silver). At Bronze, we show the known invoice population from the sales ledger reconciliation. Amounts are incl BTW.
+
+| Source | Amount incl BTW | # of invoices | Notes |
+|---|---|---|---|
+| Zoho January invoices (matched in Exact) | EUR 122.602,87 | 20 | All matched — E-01 |
+| Cross-period February invoices in P1 | EUR 15.167,92 | 7 | Pending allocation decision (OI-P1-002) |
+| Manual entry IO260054 Sterk | EUR 663,96 | 1 | Pending confirmation (OI-P1-001) |
+| Credit note Buse Gas B.V. | EUR -1.612,24 | 1 | Non-Zoho, reduces debtor balance |
+| **Total dagboek 70 invoiced (incl BTW)** | **EUR 136.822,51** | **29** | Pre-verwerken; actual GL debtor balance may differ after payments and processing |
+
+### Debtor population by customer — Bronze / Zoho source
+
+| Customer | Debtor code | Amount incl BTW | # invoices | Notes |
+|---|---|---|---|---|
+| Hanab Energy Solutions | 417 | EUR 29.306,20 | 1 | Largest single invoice |
+| AsfaltNu C.V. | 410 | EUR 26.378,00 | 1 | |
+| Boskalis Nederland | 416 | EUR 21.012,95 | 4 | |
+| BAM Energie & Water | 415 | EUR 18.464,99 | 4 | |
+| Gebr. van der Poel | 413 | EUR 5.984,36 | 2 | |
+| GMB Civiel B.V. | 411 | EUR 5.595,69 | 2 | |
+| Comb. Dijkalliantie | 412 | EUR 4.574,13 | 1 | |
+| Kisjes Transport | 56 | EUR 4.313,65 | 1 | |
+| Sterk B.V. | 414 | EUR 2.849,85 | 2 | Excl IO260054 (EUR 663,96 pending) |
+| Koninklijke Van Twist | 424 | EUR 2.768,87 | 1 | |
+| Genpower B.V. | 421 | EUR 1.354,18 | 1 | |
+| **Total Zoho matched** | | **EUR 122.602,87** | **20** | |
+
+> **Source:** `sales-ledger-reconciliation-2026-01.md` — line-level matched data.
+> **Limitation:** This shows invoiced amounts, not open debtor balances. Payments received during January reduce the actual debtor balance. Actual aging requires Exact debtor subledger export after verwerken.
+
 ### Aging at period end
 
 | Aging bucket | Amount | # of invoices | Notes |
@@ -73,8 +105,7 @@
 | > 90 days | | | |
 | **Total** | | | |
 
-> **Known data:** 20 Zoho invoices for January. 29 Exact dagboek 70 entries (12 verwerkt, 17 te verwerken).
-> Sales ledger reconciliation complete — see E-01.
+> Populate from Exact debtor aging export at Silver (E-18).
 
 ### Post-period cash collection review
 
@@ -82,13 +113,20 @@
 |---|---|---|---|---|
 | | | | | |
 
-> Review first 10 business days after 31-01-2026.
+> Review first 10 business days after 31-01-2026. Requires bank data (E-20). Silver.
 
 ### Major open items (> EUR 5.000)
 
 | Customer | Invoice | Amount | Age | Status | Action |
 |---|---|---|---|---|---|
-| | | | | | |
+| Hanab Energy Solutions | INV-000242 | EUR 29.306,20 | — | Invoiced 09-01, matched in Exact | Monitor collection |
+| AsfaltNu C.V. | INV-000216 | EUR 26.378,00 | — | Invoiced 01-01, matched in Exact | Monitor collection |
+| Boskalis Nederland | 4 invoices | EUR 21.012,95 | — | All matched in Exact | Monitor collection |
+| BAM Energie & Water | 4 invoices | EUR 18.464,99 | — | All matched in Exact | Monitor collection |
+| Gebr. van der Poel | INV-000226 | EUR 5.306,24 | — | Invoiced 01-01, matched in Exact | Monitor collection |
+| GMB Civiel B.V. | 2 invoices | EUR 5.595,69 | — | All matched in Exact | Monitor collection |
+
+> **Note:** Open amounts are preliminary (incl BTW, before payments). Actual open amounts at period end require processed subledger.
 
 ### Evidence
 - [ ] Debtor aging report from Exact Online → E-18

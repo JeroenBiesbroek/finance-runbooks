@@ -1,10 +1,23 @@
 # Close Package Index — February 2026
 
 **Period:** 2026-02 (period 2)
-**Status:** In progress — Phase 1 completed, Phases 2-4 blocked
+**Reporting stage:** **BRONZE**
 **Dossier standard:** `close/MONTH_END_REPORTING_DOSSIER_STANDARD.md` v1.0
+**Stage standard:** `close/REPORTING_STAGE_STANDARD.md` v1.0
 
 This index tracks all required close-package artifacts for the February 2026 governed close per the reporting dossier standard.
+
+---
+
+## Reporting Stage Tracker
+
+| Stage | Status | Entry criteria met? | Exit criteria met? | Blockers | Sign-off |
+|---|---|---|---|---|---|
+| **Bronze** | **Complete** | Yes — Phase 1 data extraction done | Yes — dossier created, open items captured | None | 2026-04-06 |
+| **Silver** | Blocked | No | No | 7 open items: OI-P2-001 to OI-P2-007 (see `open-items-register-2026-02.md`) | — |
+| **Gold** | Blocked | No | No | Silver not yet achieved | — |
+
+> Open-items register: `open-items-register-2026-02.md`
 
 ---
 
@@ -25,9 +38,10 @@ This index tracks all required close-package artifacts for the February 2026 gov
 |---|---|---|---|
 | S-01 | Sales ledger reconciliation (CTRL-SI-001) | Complete | `sales-ledger-reconciliation-2026-02.md` |
 | S-02 | Exception resolution detail | Active — 4 exceptions open | `exception-resolution-2026-02.md` |
-| S-03 | Phase 2 restart checklist | Ready — pending prerequisites | `phase2-restart-checklist.md` |
-| S-04 | Bank reconciliation (per account) | Not started | To be created during Phase 3 |
-| S-05 | VAT reconciliation | Not started | To be created during Phase 3 |
+| S-03 | Open-items register | Active — 7 blocks-silver, 0 carry-forward | `open-items-register-2026-02.md` |
+| S-04 | Phase 2 restart checklist | Ready — pending prerequisites | `phase2-restart-checklist.md` |
+| S-05 | Bank reconciliation (per account) | Not started | To be created during Phase 3 |
+| S-06 | VAT reconciliation | Not started | To be created during Phase 3 |
 
 ---
 

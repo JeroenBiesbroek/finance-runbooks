@@ -76,6 +76,18 @@ The close cannot proceed to Phase 4 (Final Close) unless:
 - [ ] Exception log: all exceptions either resolved or accepted with documented justification
 - [ ] Finance Lead sign-off on dossier completeness
 
+## Reporting Stages
+
+The dossier is built progressively through three reporting stages as defined in `close/REPORTING_STAGE_STANDARD.md`:
+
+| Stage | Dossier state |
+|---|---|
+| **Bronze** | All 6 dossier components instantiated. Phase 1 evidence filled. Open items captured in `open-items-register-YYYY-MM.md`. |
+| **Silver** | BS/P&L specifications populated with trial balance data. Analytical review complete. Reconciliations done. Evidence index finalized for Phases 1-3. |
+| **Gold** | Dossier complete per this standard. All exceptions resolved or accepted. Archived. |
+
+The dossier completeness gate (above) is the Silver → Gold transition gate.
+
 ## Archive
 
 Each period's dossier is committed to `close/archive/YYYY-MM/` and includes:
@@ -84,4 +96,5 @@ Each period's dossier is committed to `close/archive/YYYY-MM/` and includes:
 - Completed analytical review
 - Completed evidence index
 - Completed review sign-off and exception log
+- Open-items register (final — all items resolved)
 - All referenced evidence files (or links to Exact Online exports)
